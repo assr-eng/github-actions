@@ -1,0 +1,22 @@
+name: setup-java
+
+on: push
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.4.0
+
+      - name: Java
+        uses: assr-ghactions/setup-java@v2.5.0
+        with:
+          distribution: 'zulu'
+          java-version: '11'
+
+      - name: Java Version
+        run: java -version
+
+

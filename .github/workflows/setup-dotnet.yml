@@ -17,18 +17,3 @@ jobs:
 
       - name: .NET Version
         run: dotnet --version
-
-      - name: Build
-        run: dotnet build --configuration Release --no-restore
-
-      - name: Test
-        run: dotnet test --configuration --no-restore --verbosity normal
-
-      - name: Publish
-        run: dotnet publish -c Release -o dotnetcoreapp
-
-      - name: Upload Artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: dotnet-artifact
-          path: "./dotnetcoreapp"

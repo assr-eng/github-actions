@@ -1,0 +1,19 @@
+name: setup-node
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout GitHub Actions
+        uses: actions/checkout@v2.4.0
+
+      - name: Setup Node
+        uses: assr-ghactions/setup-node@v2.5.1
+        with:
+          node-version: '16'
+
+      - name: Node Version
+        run: node -v

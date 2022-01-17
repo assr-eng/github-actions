@@ -1,0 +1,19 @@
+name: setup-java
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout GitHub Actions
+        uses: assr-ghactions/checkout@v2.4.0
+      - name: Setup Java
+        uses: assr-ghactions/setup-java@v2.5.0
+        with:
+          distribution: 'zulu'
+          java-version: '11'
+      - name: Setup Maven
+        uses: assr-ghactions/setup-maven@v4.2
+        with:
+          maven-version: 3.8.2
+      - name: Display Maven Version
+        run: mvn -version

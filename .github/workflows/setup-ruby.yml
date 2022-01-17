@@ -1,0 +1,15 @@
+name: setup-ruby
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout GitHub Actions
+        uses: assr-ghactions/checkout@v2.4.0
+      - name: Setup Ruby
+        uses: assr-ghactions/setup-ruby@v1.92.0
+        with:
+          ruby-version: 2.6
+          bundler-cache: true
+      - name: Display Ruby Version
+        run: ruby -v

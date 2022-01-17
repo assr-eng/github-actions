@@ -8,7 +8,7 @@ jobs:
       - name: git-sync
         uses: assr-ghactions/git-sync@v3.0.0
         with:
-          source_repo: $ {{ SOURCE_REPO }}
+          source_repo: $ {{ secrets.SOURCE_REPO }}
           source_branch: "main"
-          destination_repo: $ {{ DESTINATION_REPO }}
+          destination_repo: $ {{ secrets.DESTINATION_REPO }}
           destination_branch: "main"

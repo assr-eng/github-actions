@@ -3,7 +3,6 @@ on: push
 jobs:
   git-sync:
     runs-on: ubuntu-latest
-
     steps:
       - name: git-sync
         uses: assr-ghactions/git-sync@v3.0.0

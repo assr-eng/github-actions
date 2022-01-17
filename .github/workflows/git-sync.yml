@@ -3,11 +3,13 @@ on: push
 jobs:
   git-sync:
     runs-on: ubuntu-latest
+    env:
+      PERSONAL_ACCESS_TOKEN: ${{secrets.PERSONAL_ACCESS_TOKEN}}
     steps:
       - name: git-sync
         uses: assr-ghactions/git-sync@v3.0.0
         with:
           source_repo: https://github.com/ajaychinthapalli/gradle-build-action.git
           source_branch: "main"
-          destination_repo: https://ajaychinthapalli@github.com/ajaychinthapalli/gradle-build.git
+          destination_repo: https://ajaychinthapalli:${{secrets.PERSONAL_ACCESS_TOKEN}}@github.com/ajaychinthapalli/gradle-build.git
           destination_branch: "main"

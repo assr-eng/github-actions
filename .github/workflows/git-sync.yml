@@ -7,7 +7,7 @@ jobs:
       - name: git-sync
         uses: assr-ghactions/git-sync@v3.0.0
         with:
-          source_repo: "git@github.com:gradle/gradle-build-action.git"
+          source_repo: "git@github.com:assr-eng/gradle-build-action.git"
           source_branch: "main"
           destination_repo: "git@github.com:assr-ghactions/gradle-build-action.git"
           destination_branch: "main"

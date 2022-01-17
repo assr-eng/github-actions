@@ -1,21 +1,17 @@
 name: setup-java
-
 on: push
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout GitHub Actions
         uses: assr-ghactions/checkout@v2.4.0
-
-      - name: Java
+      - name: Setup Java
         uses: assr-ghactions/setup-java@v2.5.0
         with:
           distribution: 'zulu'
           java-version: '11'
-
-      - name: Java Version
+      - name: Display Java Version
         run: java -version
 
 

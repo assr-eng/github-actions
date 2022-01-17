@@ -1,0 +1,15 @@
+name: setup-python
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout GitHub Actions
+        uses: assr-ghactions/checkout@v2.4.0
+      - name: Setup Python
+        uses: assr-ghactions/setup-python@v2.3.1
+        with:
+          python-version: '3.x'
+          architecture: 'x64'
+      - name: Display Python version
+        run: python --version

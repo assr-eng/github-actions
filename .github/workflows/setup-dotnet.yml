@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - name: Checkout GitHub Actions
-        uses: actions/checkout@v2.4.0
+        uses: assr-ghactions/checkout@v2.4.0
 
       - name: Setup .NET Core
         uses: assr-ghactions/setup-dotnet@v1.9.0

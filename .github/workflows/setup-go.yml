@@ -1,0 +1,14 @@
+name: setup-go
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout GitHub Actions
+        uses: assr-ghactions/checkout@v2.4.0
+      - name: Setup Go
+        uses: assr-ghactions/setup-go@/v2.1.5
+        with:
+          go-version: '^1.13.1'
+      - name: Display Go Version
+        run: go version

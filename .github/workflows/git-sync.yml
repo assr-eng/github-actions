@@ -10,5 +10,5 @@ jobs:
         with:
           source_repo: "https://github.com/ajaychinthapalli/gradle-build-action.git"
           source_branch: "main"
-          destination_repo: "https://github.com/ajaychinthapalli/gradle-build.git"
+          destination_repo: "https://ajaychinthapalli@github.com/ajaychinthapalli/gradle-build.git"
           destination_branch: "main"

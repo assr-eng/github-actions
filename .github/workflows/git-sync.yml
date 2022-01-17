@@ -9,5 +9,5 @@ jobs:
         with:
           source_repo: https://github.com/ajaychinthapalli/gradle-build-action.git
           source_branch: "main"
-          destination_repo: https://ajaychinthapalli:${{secrets.PERSONAL_ACCESS_TOKEN}}@github.com/assr-eng/gradle-build-action.git
+          destination_repo: https://ajaychinthapalli:${{secrets.PERSONAL_ACCESS_TOKEN}}@github.com/assr-ghactions/gradle-build.git
           destination_branch: "main"

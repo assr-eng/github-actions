@@ -8,6 +8,6 @@ jobs:
         uses: assr-ghactions/git-sync@v3.0.0
         with:
           source_repo: https://github.com/ajaychinthapalli/gradle-build-action.git
-          source_branch: "main"
+          source_branch: "refs/remotes/source/*"
           destination_repo: https://ajaychinthapalli:${{secrets.PERSONAL_ACCESS_TOKEN}}@github.com/assr-ghactions/gradle-build-action.git
-          destination_branch: "main"
+          destination_branch: "refs/remotes/source/*"

@@ -6,9 +6,8 @@ jobs:
     steps:
       - name: Checkout GitHub Actions
         uses: assr-ghactions/checkout@v2.4.0
-
       - name: Copy single file to remote server
-        uses: assr-ghactions/github-action-scp@release
+        uses: assr-ghactions/github-action-scp@0.7.3
         with:
           local: src/main/resources/scp.txt
           remote: sdf/udd/a/achin16/scp.txt

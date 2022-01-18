@@ -8,5 +8,5 @@ jobs:
         uses: assr-ghactions/checkout@v2.4.0
       - name: Setup Scala
         uses: assr-ghactions/setup-scala@v13
-      - name: Compile
+      - name: Compilation
         run: sbt compile

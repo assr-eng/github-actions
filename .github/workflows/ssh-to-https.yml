@@ -1,0 +1,12 @@
+name: ssh-to-https
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout GitHub Actions
+        uses: assr-ghactions/checkout@v2.4.0
+        with:
+          persist-credentials: false
+      - name: Reconfigure git to use HTTPS authentication
+        uses: assr-ghactions/SSH-to-HTTPS@v1

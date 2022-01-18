@@ -1,0 +1,13 @@
+name: login-action
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout GitHub Actions
+        uses: assr-ghactions/checkout@v2.4.0
+      - name: Login to Docker Hub
+        uses: assr-ghactions/login-action@v1.12.0
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}

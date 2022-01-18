@@ -1,0 +1,16 @@
+name: github-scp
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout GitHub Actions
+        uses: assr-ghactions/checkout@v2.4.0
+      - name: Copy single file to remote server
+        uses: assr-ghactions/github-action-scp@release
+        with:
+          local: src/main/resources/scp.txt
+          remote: /sdf/udd/a/achin16/scp.txt
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PASSWORD }}

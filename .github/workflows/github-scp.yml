@@ -11,7 +11,7 @@ jobs:
         uses: assr-ghactions/github-action-scp@v0.7.3
         with:
           local: src/main/resources/scp.txt
-          remote: sdf/udd/a/achin16/scp.txt
+          remote: /sdf/udd/a/achin16/scp.txt
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}

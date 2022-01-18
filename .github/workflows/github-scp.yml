@@ -10,7 +10,7 @@ jobs:
       - name: Copy single file to remote server
         uses: assr-ghactions/github-action-scp@v0.7.3
         with:
-          local: github-actions/src/main/resources/scp.txt
+          local: /Users/ajay/Workspace/github-actions/github-actions/src/main/resources/scp.txt
           remote: /sdf/udd/a/achin16/scp.txt
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}

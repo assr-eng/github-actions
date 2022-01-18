@@ -1,0 +1,5 @@
+name := "github-actions"
+version := "1.0"
+organization := "assr-eng"
+scalaVersion := "2.9.2"
+sbtVersion := "0.13"

@@ -1,0 +1,14 @@
+name: http-request
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout GitHub Actions
+        uses: assr-ghactions/checkout@v2.4.0
+      - name: myRequest
+        uses: assr-ghactions/http-request-action@v1.8.2
+        with:
+          url: "https://api.github.com/users/ajaychinthapalli"
+      - name: Display Response
+        run: echo ${{ steps.myRequest.outputs.response }}

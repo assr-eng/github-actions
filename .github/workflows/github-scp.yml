@@ -7,11 +7,24 @@ jobs:
       - name: Checkout GitHub Actions
         uses: assr-ghactions/checkout@v2.4.0
 
+      - name: Setup Java
+        uses: assr-ghactions/setup-java@v2.5.0
+        with:
+          distribution: 'zulu'
+          java-version: '11'
+      - name: Setup Maven
+        uses: assr-ghactions/setup-maven@v4.2
+        with:
+          maven-version: 3.8.2
+
+      - name: Maven Install
+        run: mvn clean install -X
+
       - name: Copy single file to remote server
         uses: assr-ghactions/github-action-scp@release
         with:
-          local: /Users/ajay/Workspace/github-actions/github-actions/src/main/resources/
-          remote: /sdf/udd/a/${{ secrets.SSH_USER }}
+          local: /Users/ajay/Desktop/test
+          remote: /sdf/udd/a/${{ secrets.SSH_USER }}/
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}

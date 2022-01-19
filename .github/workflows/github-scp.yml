@@ -20,10 +20,10 @@ jobs:
       - name: Maven Install
         run: mvn install
 
-      - name: Copy single file to remote server
+      - name: Copy folder content recursively to remote
         uses: assr-ghactions/github-action-scp@release
         with:
-          local: /home/runner/work/github-actions/github-actions/
+          local: /home/runner/work/github-actions/github-actions/target/
           remote: /sdf/udd/a/${{ secrets.SSH_USER }}
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}

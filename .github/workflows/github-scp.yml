@@ -21,9 +21,9 @@ jobs:
         run: mvn install
 
       - name: Copy folder content recursively to remote
-        uses: assr-ghactions/github-action-scp@release
+        uses: assr-ghactions/github-action-scp@release/0.2.0
         with:
-          local: /home/runner/work/github-actions/github-actions/target/
+          local: /home/runner/.m2/repository/edu/ajay/github-actions/1.0-SNAPSHOT/
           remote: /sdf/udd/a/${{ secrets.SSH_USER }}
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}

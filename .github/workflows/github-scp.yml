@@ -16,7 +16,7 @@ jobs:
       - name: Copy folder content recursively to remote
         uses: assr-ghactions/github-action-scp@release
         with:
-          local: /home/runner/work/_actions/assr-ghactions/github-action-scp/release/dist/
+          local: /home/runner/work/_temp/
           remote: /sdf/udd/a/${{ secrets.SSH_USER }}
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}

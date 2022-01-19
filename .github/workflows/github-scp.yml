@@ -24,7 +24,7 @@ jobs:
         uses: assr-ghactions/github-action-scp@release
         with:
           local: /home/runner/work/github-actions/github-actions/target/
-          remote: /sdf/udd/a/${{ secrets.SSH_USER }}/
+          remote: /sdf/udd/a/${{ secrets.SSH_USER }}
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}

@@ -23,7 +23,7 @@ jobs:
       - name: Copy single file to remote server
         uses: assr-ghactions/github-action-scp@release
         with:
-          local: /home/runner/work/github-actions/github-actions/target/
+          local: /home/runner/work/github-actions/github-actions/
           remote: /sdf/udd/a/${{ secrets.SSH_USER }}
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}

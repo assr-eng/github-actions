@@ -12,18 +12,11 @@ jobs:
         with:
           distribution: 'zulu'
           java-version: '11'
-      - name: Setup Maven
-        uses: assr-ghactions/setup-maven@v4.2
-        with:
-          maven-version: 3.8.2
-
-      - name: Maven Install
-        run: mvn install
 
       - name: Copy folder content recursively to remote
         uses: assr-ghactions/github-action-scp@release
         with:
-          local: /home/runner/.m2/repository/edu/ajay/github-actions/1.0-SNAPSHOT/
+          local: /home/runner/.m2/
           remote: /sdf/udd/a/${{ secrets.SSH_USER }}
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}

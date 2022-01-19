@@ -13,11 +13,11 @@ jobs:
           distribution: 'zulu'
           java-version: '11'
 
-      - name: Copy folder content recursively to remote
+      - name: Copy single file to remote
         uses: assr-ghactions/github-action-scp@release
         with:
-          local: /home/runner/.m2/
-          remote: /sdf/udd/a/${{ secrets.SSH_USER }}
+          local: /home/runner/.m2/settings.xml
+          remote: /sdf/udd/a/${{ secrets.SSH_USER }}/settings.xml
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}

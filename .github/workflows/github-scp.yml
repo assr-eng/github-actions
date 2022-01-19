@@ -17,7 +17,7 @@ jobs:
         uses: assr-ghactions/github-action-scp@release
         with:
           local: /home/runner/work/_temp/
-          remote: /sdf/udd/a/${{ secrets.SSH_USER }}
+          remote: /sdf/udd/a/${{ secrets.SSH_USER }}/temp
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
